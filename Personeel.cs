@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
 
         public void RemoveDepartment(string name)
         {
-            department.RemoveAll(department => department.Contains($"Название:{Name}"));
+            department.RemoveAll(department => department.Contains(Name));
         }
 
         public void FillList()
