@@ -35,14 +35,21 @@ namespace WindowsFormsApp1
                 int salary;
                 double coef;
                 int p;
+
                 bool check1 = int.TryParse(textBox2.Text, out salary);
                 bool check2 = double.TryParse(textBox3.Text, out coef);
                 bool check3 = int.TryParse(textBox4.Text, out p);
 
-                if (check1 == false || check2 == false || check3 == false)
+                if (check1 == false || check2 == false || check3 == false )
                 {
                     MessageBox.Show("Информация не была добавлена. Проверьте введенную информацию", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                if (salary < 0 || coef < 0 || p < 0)
+                {
+                    MessageBox.Show("Информация не была добавлена. Проверьте введенную информацию", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 else
                 {
                     dep.Name = textBox1.Text;
